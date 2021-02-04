@@ -24,16 +24,18 @@ Map::Map(int height, int width)
     _map._map_h = height;
     _map._map_w = width;
 
-    clear_map();
-
     _obstacles = (obstacle_struct *)malloc(sizeof(obstacle_struct) * 10);
 
+    obstacle_width = width / obstacle_num;
+}
+
+void Map::setup()
+{
+    clear_map();
     for (int i = 0; i < obstacle_num; i++)
     {
         create_obstacle(_obstacles + i);
     }
-
-    obstacle_width = width / obstacle_num;
     x_shift = 0;
     first_obstacle_index = 0;
 }

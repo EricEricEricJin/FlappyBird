@@ -2,7 +2,7 @@
 
 int main()
 {
-    while (true)
-        main_loop();
+
+    main_loop();
     return 0;
 }

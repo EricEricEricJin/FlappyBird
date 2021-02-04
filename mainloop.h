@@ -8,5 +8,4 @@
 #define WIN_W 80
 #define WIN_H 24
 
-
 void main_loop();
